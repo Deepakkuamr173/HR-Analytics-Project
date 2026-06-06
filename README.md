@@ -312,7 +312,8 @@ Business Insights
 # 📷 Dashboard Preview
 
 ## Overall Dashboard
-(Add Screenshot Here)
+
+![Overall Dashboard](Power%20BI%20Dashboards/Dashboard%20%20of%20all%20three%20month.png)
 
 ## April 2022 Dashboard
 (Add Screenshot Here)
