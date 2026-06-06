@@ -2,11 +2,6 @@
 
 ## 📊 End-to-End Data Analytics Project using Python, SQL & Power BI
 
-![Python](https://img.shields.io/badge/Python-Data%20Analysis-blue?logo=python)
-![SQL](https://img.shields.io/badge/SQL-Database-orange?logo=mysql)
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)
-![Analytics](https://img.shields.io/badge/Domain-HR%20Analytics-success)
-
 ---
 
 # 📌 Project Overview
