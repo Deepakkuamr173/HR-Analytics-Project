@@ -1,34 +1,52 @@
 # 🚀 HR Analytics Dashboard
+
 ## 📊 End-to-End Data Analytics Project using Python, SQL & Power BI
+
+![Python](https://img.shields.io/badge/Python-Data%20Analysis-blue?logo=python)
+![SQL](https://img.shields.io/badge/SQL-Database-orange?logo=mysql)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)
+![Analytics](https://img.shields.io/badge/Domain-HR%20Analytics-success)
 
 ---
 
 # 📌 Project Overview
 
-This project is a complete **HR Analytics Dashboard** developed using **Python**, **SQL**, and **Power BI**.
+The HR Analytics Dashboard is a complete end-to-end Data Analytics project designed to analyze employee attendance, work-from-home trends, leave patterns, and workforce performance.
 
-The main objective of this project is to analyze employee attendance, work-from-home trends, sick leaves, and workforce presence insights using interactive dashboards and data analytics techniques.
+The project follows a real-world analytics workflow where raw attendance data from multiple Excel sheets is transformed into actionable business insights using Python, SQL, and Power BI.
 
-The raw attendance data was collected from multiple Excel sheets and transformed into a clean analytical dataset using Python. The cleaned dataset was then imported into SQL for analysis and finally visualized in Power BI through an interactive dashboard.
+The dashboard helps HR teams monitor employee presence, identify attendance patterns, evaluate work-from-home adoption, and make data-driven workforce decisions.
 
 ---
 
-# 🛠️ Technologies Used
+# 🎯 Business Objectives
+
+- Monitor employee attendance trends
+- Analyze Work From Home (WFH) patterns
+- Track Sick Leave and other leave categories
+- Measure employee presence percentage
+- Generate workforce performance insights
+- Build an interactive HR dashboard for decision-making
+
+---
+
+# 🛠️ Technology Stack
 
 | Technology | Purpose |
-|---|---|
+|------------|----------|
 | 🐍 Python | Data Cleaning & Transformation |
-| 🗄️ SQL (MySQL) | Data Analysis |
-| 📊 Power BI | Dashboard & Visualization |
-| 📑 Excel | Raw Dataset |
+| 🗄️ MySQL | Data Storage & Analysis |
+| 📊 Power BI | Dashboard Development |
+| 📑 Excel | Raw Data Source |
+| 📈 DAX | KPI & Measure Calculations |
 
 ---
 
 # 📂 Dataset Information
 
-The dataset contains employee attendance records from multiple monthly Excel sheets:
+The attendance dataset consists of employee attendance records collected across multiple months:
 
-- 📅 Apr 2022
+- 📅 April 2022
 - 📅 May 2022
 - 📅 June 2022
 
@@ -37,47 +55,53 @@ The dataset contains employee attendance records from multiple monthly Excel she
 # 📌 Attendance Status Codes
 
 | Status | Meaning |
-|---|---|
-| ✅ P | Present |
-| 🏠 WFH | Work From Home |
-| ⚡ HWFH | Half Work From Home |
-| 🩺 SL | Sick Leave |
-| 💰 PL | Paid Leave |
-| 🎉 BL | Birthday Leave |
-| ❌ LWP | Leave Without Pay |
-| 🛌 WO | Weekly Off |
-| 🎊 HO | Holiday Off |
+|---------|---------|
+| P | Present |
+| WFH | Work From Home |
+| HWFH | Half Work From Home |
+| SL | Sick Leave |
+| PL | Paid Leave |
+| BL | Birthday Leave |
+| LWP | Leave Without Pay |
+| WO | Weekly Off |
+| HO | Holiday |
 
 ---
 
-# 🐍 Python Data Cleaning Process
+# 🐍 Python Data Cleaning & Transformation
 
-Python Pandas was used to clean and transform the raw attendance Excel files.
+Python Pandas was used to clean and prepare the raw attendance data for analysis.
+
+## Data Cleaning Steps
+
+✔ Imported multiple Excel sheets
+
+✔ Combined monthly attendance records
+
+✔ Renamed columns
+
+✔ Removed unnecessary fields
+
+✔ Converted wide format into long format using `melt()`
+
+✔ Handled missing values
+
+✔ Standardized date formats
+
+✔ Exported cleaned dataset into CSV
 
 ---
 
-# 🔹 Data Cleaning Steps
-
-✅ Imported multiple Excel sheets  
-✅ Combined monthly attendance sheets  
-✅ Renamed columns  
-✅ Removed unwanted columns  
-✅ Converted wide format into long format using `melt()`  
-✅ Cleaned null values  
-✅ Formatted attendance dates  
-✅ Exported cleaned dataset into CSV format  
-
----
-
-# 📌 Python Libraries Used
+## Python Libraries Used
 
 ```python
 import pandas as pd
+import numpy as np
 ```
 
 ---
 
-# 📌 Python Features Used
+## Python Functions Used
 
 ```python
 read_excel()
@@ -85,6 +109,7 @@ concat()
 melt()
 drop()
 rename()
+fillna()
 to_csv()
 ```
 
@@ -92,11 +117,9 @@ to_csv()
 
 # 🗄️ SQL Analysis
 
-The cleaned CSV dataset was imported into MySQL database for workforce analytics and attendance analysis.
+After cleaning the data, the dataset was imported into MySQL for workforce analysis.
 
----
-
-# 🏗️ Database Creation
+## Database Creation
 
 ```sql
 CREATE DATABASE HR_Project;
@@ -106,10 +129,10 @@ USE HR_Project;
 
 ---
 
-# 📋 Employee Attendance Table
+## Employee Attendance Table
 
 ```sql
-CREATE TABLE employee(
+CREATE TABLE employee (
     attendance_id INT AUTO_INCREMENT PRIMARY KEY,
     Employee_Code VARCHAR(20),
     Name VARCHAR(50),
@@ -121,19 +144,19 @@ CREATE TABLE employee(
 
 ---
 
-# 📊 SQL Analysis Performed
+## SQL Analysis Performed
 
-✅ Total Employees Analysis  
-✅ Attendance Percentage Calculation  
-✅ WFH Analysis  
-✅ Leave Analysis  
-✅ Monthly Attendance Analysis  
-✅ Top Employees by Attendance  
-✅ Workforce Presence Insights  
+- Total Employees Analysis
+- Attendance Percentage Calculation
+- WFH Analysis
+- Leave Analysis
+- Monthly Attendance Analysis
+- Top Employees by Attendance
+- Workforce Presence Analysis
 
 ---
 
-# 📌 SQL Concepts Used
+## SQL Concepts Used
 
 ```sql
 COUNT()
@@ -143,48 +166,55 @@ CASE WHEN
 DISTINCT
 WHERE
 IN
+SUM()
+AVG()
 ```
 
 ---
 
 # 📊 Power BI Dashboard
 
-An interactive HR Analytics Dashboard was created in Power BI to visualize workforce insights and attendance trends.
+An interactive HR Analytics Dashboard was developed in Power BI to visualize attendance and workforce insights.
 
 ---
 
-# 🎯 Dashboard Features
+## KPI Cards
 
-## 📌 KPI Cards
+✅ Presence Percentage
 
-✅ Presence Percentage  
-🏠 WFH Percentage  
-🩺 Sick Leave Percentage  
+🏠 WFH Percentage
 
----
+🩺 Sick Leave Percentage
 
-# 📈 Dashboard Visualizations
+📅 Total Working Days
 
-✅ Attendance Trend by Day  
-✅ WFH Trend by Day  
-✅ Sick Leave Trend by Day  
-✅ Employee-wise Attendance Analysis  
-✅ Day-wise Attendance Insights  
-✅ Monthly Workforce Analysis  
+👨‍💼 Employee Attendance Metrics
 
 ---
 
-# 🎛️ Interactive Dashboard Features
+## Dashboard Visualizations
 
-✅ Month Slicer  
-✅ Dynamic Filtering  
-✅ Interactive Charts  
-✅ Employee-wise Insights  
-✅ Trend Analysis  
+- Attendance Trend by Day
+- Work From Home Trend
+- Sick Leave Trend
+- Employee-wise Attendance Analysis
+- Monthly Workforce Analysis
+- Attendance Percentage Tracking
+- Presence vs Leave Analysis
 
 ---
 
-# 📌 DAX Measures Used
+## Interactive Features
+
+- Dynamic Month Slicer
+- Employee Filters
+- Interactive Visualizations
+- Cross Filtering
+- Trend Analysis
+
+---
+
+# 📈 DAX Measures Implemented
 
 ```DAX
 Present Day
@@ -198,38 +228,43 @@ SL Percentage(%)
 
 ---
 
-# 🔥 Key Insights
+# 🔥 Key Insights Generated
 
-📌 Monitored employee attendance trends  
+📌 Identified employee attendance patterns
 
-📌 Analyzed work-from-home patterns  
+📌 Measured workforce presence percentage
 
-📌 Identified sick leave trends  
+📌 Analyzed work-from-home trends
 
-📌 Compared weekday attendance performance  
+📌 Tracked sick leave behavior
 
-📌 Measured workforce presence percentage  
+📌 Compared monthly attendance performance
 
-📌 Generated HR workforce insights through data visualization  
+📌 Generated HR workforce insights for decision-making
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 HR-Analytics-Project/
 │
 ├── Data/
-│   ├── Cleaned_Attendance.csv
+│   ├── Attendance-Sheet-2022-2023.xlsx
+│   └── Cleaned_Attendance.csv
 │
 ├── Python/
-│   ├── clean_data.py
+│   └── clean_data.ipynb
 │
 ├── SQL/
-│   ├── hr_queries.sql
+│   └── hr_queries.sql
 │
-├── PowerBI/
+├── Dashboards/
 │   ├── HR_Analytics_Dashboard.pbix
+│   ├── Dashboard_Apr_2022.png
+│   ├── Dashboard_May_2022.png
+│   ├── Dashboard_June_2022.png
+│   └── Overall_Dashboard.png
 │
 └── README.md
 ```
@@ -240,44 +275,35 @@ HR-Analytics-Project/
 
 ```text
 Raw Excel Attendance Data
-            ↓
-Python Data Cleaning & Transformation
-            ↓
-Cleaned CSV Dataset
-            ↓
-SQL Database Import & Analysis
-            ↓
-Power BI Dashboard Visualization
+            │
+            ▼
+Python Data Cleaning
+            │
+            ▼
+Data Transformation
+            │
+            ▼
+MySQL Analysis
+            │
+            ▼
+Power BI Dashboard
+            │
+            ▼
+Business Insights
 ```
 
 ---
 
-# 💡 Project Outcome
+# 🎓 Skills Demonstrated
 
-This project demonstrates a complete end-to-end data analytics workflow including:
-
-✅ Data Cleaning  
-
-✅ Data Transformation  
-
-✅ SQL Analysis  
-
-✅ Business Intelligence Dashboard  
-
-✅ HR Workforce Analytics  
-
-✅ Interactive Data Visualization  
-
----
-
-# 🎓 Skills Gained
-
-- Python Pandas
-- SQL Queries
-- Power BI Dashboard Development
+- Python (Pandas, NumPy)
+- SQL (MySQL)
+- Power BI
+- DAX
 - Data Cleaning
 - Data Transformation
 - Data Visualization
+- Dashboard Development
 - Workforce Analytics
 - Business Intelligence
 
@@ -285,23 +311,54 @@ This project demonstrates a complete end-to-end data analytics workflow includin
 
 # 📷 Dashboard Preview
 
-## HR Analytics Dashboard
+## Overall Dashboard
+(Add Screenshot Here)
 
-- Presence Insights
-- WFH Insights
-- Sick Leave Insights
-- Attendance Trends
-- Employee Performance Analysis
+## April 2022 Dashboard
+(Add Screenshot Here)
+
+## May 2022 Dashboard
+(Add Screenshot Here)
+
+## June 2022 Dashboard
+(Add Screenshot Here)
+
+---
+
+# 💡 Project Outcome
+
+This project demonstrates a complete end-to-end data analytics workflow including:
+
+✅ Data Cleaning
+
+✅ Data Transformation
+
+✅ SQL Analysis
+
+✅ HR Analytics
+
+✅ Interactive Dashboard Development
+
+✅ Business Intelligence Reporting
 
 ---
 
 # 👨‍💻 Author
 
-# Deepak Kumar
+## Deepak Kumar
 
-## 📌 Data Analytics Project
-### Using Python, SQL & Power BI 🚀
+Aspiring Data Analyst | Python | SQL | Power BI | Data Visualization
+
+🔗 LinkedIn: https://www.linkedin.com/in/deepak-kumar-541456265/
+
+💻 GitHub: https://github.com/Deepakkuamr173
 
 ---
 
-# ⭐ If you like this project, give it a star on GitHub!
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Your support motivates me to build more Data Analytics, Business Intelligence, and Financial Analytics projects.
+
+🚀 Thank you for visiting this project!
