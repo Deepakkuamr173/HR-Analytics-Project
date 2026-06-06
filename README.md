@@ -311,18 +311,29 @@ Business Insights
 
 # 📷 Dashboard Preview
 
+# 📷 Dashboard Preview
+
 ## Overall Dashboard
 
-![Overall Dashboard](Power%20BI%20Dashboards/Dashboard%20%20of%20all%20three%20month.png)
+![Overall Dashboard](https://raw.githubusercontent.com/Deepakkuamr173/HR-Analytics-Project/main/Power%20BI%20Dashboards/Dashboard%20%20of%20all%20three%20month.png)
+
+---
 
 ## April 2022 Dashboard
-(Add Screenshot Here)
+
+![April Dashboard](https://raw.githubusercontent.com/Deepakkuamr173/HR-Analytics-Project/main/Power%20BI%20Dashboards/Dashboard%20of%20Apr%202022.png)
+
+---
 
 ## May 2022 Dashboard
-(Add Screenshot Here)
+
+![May Dashboard](https://raw.githubusercontent.com/Deepakkuamr173/HR-Analytics-Project/main/Power%20BI%20Dashboards/Dashboard%20Of%20May%202022.png)
+
+---
 
 ## June 2022 Dashboard
-(Add Screenshot Here)
+
+![June Dashboard](https://raw.githubusercontent.com/Deepakkuamr173/HR-Analytics-Project/main/Power%20BI%20Dashboards/Dashboard%20of%20Jun%202022.png)
 
 ---
 
